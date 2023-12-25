@@ -12,7 +12,21 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
 ```
+
+## Env file=================
+DATABASE_URL="mysql://root:@localhost:3306/news"
+
+JWT_SECRET = "Secret@123"
+JWT_ISSUER = "localhost"
+JWT_EXPIRATION_TIME = "5h"
+
+
+MAIL_ID=mranasrj01@gmail.com
+MAIL_PASS=dekxefijmevaqtgk
+
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

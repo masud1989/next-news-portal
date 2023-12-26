@@ -77,7 +77,7 @@ model socials {
 
 model subscribers {
   id Int @id @default(autoincrement())
-  email String @db.VarChar(55)
+  email String @db.VarChar(55) @unique
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt 
 }
@@ -89,3 +89,5 @@ model policies {
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt 
 }
+
+

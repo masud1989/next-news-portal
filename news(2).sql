@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2023 at 12:25 PM
+-- Generation Time: Dec 31, 2023 at 01:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -68,7 +68,11 @@ INSERT INTO `comments` (`id`, `descriptions`, `userId`, `postId`) VALUES
 (6, 'ABC', 1, 1),
 (7, 'ABC', 1, 2),
 (8, 'ABC', 1, 1),
-(9, 'ABC', 1, 3);
+(9, 'ABC', 1, 3),
+(10, 'My Comment', 1, 1),
+(11, 'My Comment-1', 1, 1),
+(12, 'My Comment-1', 1, 2),
+(13, 'My Comment-2', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -320,7 +324,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `news_list`

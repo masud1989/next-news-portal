@@ -7,7 +7,6 @@ export async function GET(req, res){
         const headerList = headers() 
         const id = parseInt(headerList.get('id'))
         const Prisma = new PrismaClient()
-
        const  result = await Prisma.comments.findMany({
             where: {userId: id},
             include: {news_list: {select:{title:true}}}
@@ -25,13 +24,10 @@ export async function POST(req, res){
         const id = parseInt(headerList.get('id'))
         const postBody = await req.json()
         postBody.userId= id
-
         const Prisma = new PrismaClient()
-        
         const result = await Prisma.comments.create({
             data: postBody
         })
-
         return NextResponse.json({status : 'success',data: result})
     } 
     catch (error) {
@@ -45,9 +41,7 @@ export async function DELETE(req, res){
         const user_id = parseInt(headerList.get('id'))
         const postBody = await req.json()
         const comment_id = parseInt(postBody['id'])
-
         const Prisma = new PrismaClient()
-        
         const result = await Prisma.comments.deleteMany({
             where:{
                 AND:[
@@ -56,7 +50,6 @@ export async function DELETE(req, res){
                 ]
             }
         })
-
         return NextResponse.json({status : 'success', data: result})
     } 
     catch (error) {

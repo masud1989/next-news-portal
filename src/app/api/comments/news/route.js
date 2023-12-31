@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 
+// Comment by News 
 export async function GET(req, res){
     try {
        const {searchParams} = new URL(req.url) 

@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 const { PrismaClient } = require("@prisma/client");
 const { NextResponse } = require("next/server");
 
+//Get Comment by User
 export async function GET(req, res){
     try {
         const headerList = headers() 
@@ -18,6 +19,7 @@ export async function GET(req, res){
     }
 }
 
+// Create Comment 
 export async function POST(req, res){
     try {
         const headerList = headers()
@@ -35,6 +37,7 @@ export async function POST(req, res){
     }
 }
 
+// Delete Comment
 export async function DELETE(req, res){
     try {
         const headerList = headers()

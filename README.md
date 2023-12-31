@@ -15,7 +15,7 @@ bun dev
 
 ```
 
-## Env file=================
+## file=================
 DATABASE_URL="mysql://root:@localhost:3306/news"
 
 JWT_SECRET = "Secret@123"
